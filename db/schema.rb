@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180409110638) do
+ActiveRecord::Schema.define(version: 20180409112734) do
+
+  create_table "tweets", force: :cascade do |t|
+    t.string "title"
+    t.string "context"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
